@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connexion / Inscription</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <h2>Connexion</h2>
+      <form action="" id="loginForm">
+        <label for="email">Email :</label>
+        <input type="email" id="loginEmail" placeholder="Email" required />
+        <label for="password">Mot de passe :</label>
+        <input type="password" id="loginPassword" placeholder="Mot de passe" required />
+        <div id="loginMessage"></div>
+        <button type="submit">Se connecter</button>
+      </form>
+
+      <h2>S'inscrire</h2>
+      <form action="" id="signupForm">
+        <label for="name">Nom :</label>
+        <input type="text" id="signupName" placeholder="Nom" required />
+        <label for="email">Email :</label>
+        <input type="text" id="signupEmail" placeholder="Email" required />
+        <label for="password">Mot de passe :</label>
+        <input type="password" id="signupPassword" placeholder="Mot de passe" required />
+        <div id="signupMessage"></div>
+        <button type="submit">S'inscrire</button>
+      </form>
+    </main>
+    <footer></footer>
+    <script src="./JS/config.js" type="module"></script>
+    <script src="./JS/auth.js" type="module"></script>
+  </body>
+</html>
