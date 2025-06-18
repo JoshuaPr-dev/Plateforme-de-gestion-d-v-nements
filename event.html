@@ -3,16 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EventMate</title>
+    <title>EventMate - Détails de l'événement</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <header></header>
+    <header>
+        <a href="index.html" class="back-button">← Retour aux événements</a>
+    </header>
     <main>
+        <div id="eventDetails">
+            <div class="loading">Chargement de l'événement...</div>
+        </div>
+        <div id="participationSection">
+            <button id="participateButton" style="display: none;">Participer</button>
+            <div id="participationMessage"></div>
+        </div>
     </main>
     <footer></footer>
-    <script src="./JS/auth.js"></script>
-    <script src="./JS/events.js"></script>
-    <script src="./JS/comments.js"></script>
-    <script src="./JS/participation.js"></script>
+    <script src="./JS/config.js" type="module"></script>
+    <script src="./JS/participation.js" type="module"></script>
 </body>
 </html>

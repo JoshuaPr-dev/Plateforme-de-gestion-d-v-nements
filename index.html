@@ -4,13 +4,70 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EventMate</title>
-    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <header></header>
 
     <main>
       <button id="logoutButton">Se déconnecter</button>
+
+      <section>
+        <h2>Créer un événement</h2>
+        <form id="createEventForm">
+          <div>
+            <label for="titre">Titre *</label>
+            <input type="text" id="titre" name="titre" required />
+          </div>
+
+          <div>
+            <label for="description">Description *</label>
+            <textarea id="description" name="description" required></textarea>
+          </div>
+
+          <div>
+            <label for="date">Date et heure *</label>
+            <input type="datetime-local" id="date" name="date" required />
+          </div>
+
+          <div>
+            <label for="lieu">Lieu *</label>
+            <input type="text" id="lieu" name="lieu" required />
+          </div>
+
+          <div>
+            <label for="tags">Tags (séparés par des virgules)</label>
+            <input type="text" id="tags" name="tags" placeholder="sport, musique, art..." />
+          </div>
+
+          <div>
+            <label for="is_private">Événement privé</label>
+            <input type="checkbox" id="is_private" name="is_private" />
+          </div>
+
+          <div>
+            <label for="langue">Langue</label>
+            <select id="langue" name="langue">
+              <option value="francais">Français</option>
+              <option value="anglais">Anglais</option>
+              <option value="espagnol">Espagnol</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="places">Nombre de places</label>
+            <input type="number" id="places" name="places" min="1" />
+          </div>
+
+          <div id="createEventMessage"></div>
+          <button type="submit">Créer l'événement</button>
+        </form>
+      </section>
+
+      <section>
+        <h2>Événements</h2>
+        <div id="eventsList"></div>
+        <div id="participationMessage"></div>
+      </section>
     </main>
 
     <footer></footer>
@@ -20,4 +77,3 @@
     <script src="./JS/events.js" type="module"></script>
   </body>
 </html>
-
